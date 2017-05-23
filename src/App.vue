@@ -1,28 +1,18 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+<template lang="pug">
+    #app
 </template>
 
 <script>
-import Hello from './components/Hello'
-
 export default {
-  name: 'app',
-  components: {
-    Hello
-  }
+    mounted(){
+        var data = {
+            title:'会议室开会',
+            desc:'关于本轮开发的需求讨论，项目进度计划安排等，全体都要参加，带好笔记本。'
+        }
+        this.$notice(data,'info')
+    }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./assets/styles/notice.scss"></style>
+<style src="./assets/font/iconfont.css"></style>
